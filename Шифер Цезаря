@@ -1,0 +1,21 @@
+eng = ("abcdefghijklmnoprstuvwxyz")
+nums = ("0123456789")
+key = 1
+message = input()
+word = ' '
+for i in message:
+    if i in eng:
+        if i == eng[-1]:
+            word += eng[0]
+        else:
+            start = eng.index(i)
+            np = start + key
+            word += eng[np]
+    elif i in nums:
+        if i == nums[-1]:
+            word+= nums[0]
+        else:
+            start = nums.index(i)
+            np = start + key
+            word += nums[np]
+print(word.lower())
